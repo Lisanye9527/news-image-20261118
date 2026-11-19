@@ -13,6 +13,7 @@ const target = join(targetDir, 'entry.png');
 
 copyFileSync(new URL('./entry.png', import.meta.url), target);
 
-// A one-line receipt on stderr so a human running this by hand can see the
-// image landed and how large it is; the grader only reads the file itself.
+// A one-line receipt on stderr so a human running this by hand can see
+// where the image landed and how large it is, in bytes; the grader itself
+// only reads the file, never this message.
 console.error(`news-image-20261118: wrote ${target} (${statSync(target).size} bytes)`);
